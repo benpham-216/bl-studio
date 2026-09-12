@@ -1,0 +1,33 @@
+schemaVersion: "1.0"
+name: bl-studio
+repository: benpham-216/bl-studio
+defaultBranch: main
+changePolicy:
+  pullRequestsRequired: true
+  directPushToDefaultBranch: false
+projects:
+  - id: studio-web
+    path: apps/studio-web
+    runtime: node
+    phase: mvp
+  - id: platform-api
+    path: apps/platform-api
+    runtime: dotnet
+    phase: mvp
+  - id: job-worker-go
+    path: apps/job-worker-go
+    runtime: go
+    phase: mvp-jobs
+  - id: contracts
+    path: contracts
+    runtime: none
+    phase: mvp
+  - id: node-runner
+    path: runners/node
+    runtime: node
+    phase: mvp-jobs
+deferredProjects:
+  - mcp-adapter
+  - dotnet-runner
+  - go-runner
+environments: [local, test, staging, production]
