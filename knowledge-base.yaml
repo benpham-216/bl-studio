@@ -1,0 +1,23 @@
+schemaVersion: "1.0"
+repository: benpham-216/knowledge-base
+url: https://github.com/benpham-216/knowledge-base
+branch: main
+manifestPath: knowledge.config.json
+purpose: Durable architecture research, reusable decisions, and investigation findings for bl.Studio.
+notes:
+  - id: kb-software-cms-architecture-001
+    path: notes/software/cms-component-studio-architecture.md
+    role: Architecture baseline
+  - id: kb-software-cms-versioning-001
+    path: notes/software/cms-component-studio-versioning.md
+    role: Revision and release lifecycle
+  - id: kb-software-cms-extensions-001
+    path: notes/software/cms-component-studio-extensions.md
+    role: Template and plugin contracts
+  - id: kb-software-cms-mvp-plan-001
+    path: notes/software/cms-component-studio-mvp-plan.md
+    role: MVP delivery plan
+  - id: kb-software-cms-investigation-001
+    path: notes/software/cms-component-studio-investigation.md
+    role: Open architecture investigations
+

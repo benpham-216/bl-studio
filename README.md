@@ -34,13 +34,16 @@ The repository is a monorepo for the platform implementation. Source repositorie
 
 Detailed workspace boundaries are in [docs/architecture/workspace.md](docs/architecture/workspace.md). The delivery sequence is in [docs/roadmap/mvp.md](docs/roadmap/mvp.md).
 
+## Knowledge base
+
+Architecture research and reusable decisions are maintained in [benpham-216/knowledge-base](https://github.com/benpham-216/knowledge-base). See [docs/knowledge-base.md](docs/knowledge-base.md) for the linked CMS notes and the synchronization workflow. Tools can read the same references from [knowledge-base.yaml](knowledge-base.yaml).
+
 ## Repository workflow
 
 All changes use a branch and pull request. Protect `main`, require successful checks, block force pushes and deletions, and require resolved review threads before merge.
 
 ## Start implementation
 
-1. Review and merge the workspace initialization pull request.
-2. Enable branch protection for `main` with required pull requests and checks.
-3. Record the first architecture decisions before installing application dependencies.
-4. Build the TypeScript asset lifecycle end to end before adding other ecosystems.
+1. Enable branch protection for `main` with required pull requests and checks.
+2. Record the first architecture decisions before installing application dependencies.
+3. Build the TypeScript asset lifecycle end to end before adding other ecosystems.
