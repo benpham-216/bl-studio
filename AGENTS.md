@@ -6,7 +6,7 @@ This repository implements bl.Studio. Durable general knowledge belongs in `benp
 
 ## Change workflow
 
-- Never push implementation changes directly to `main` or `master`.
+- Never push implementation changes directly to `dev` or `main`.
 - Create a focused branch and pull request for every change.
 - Keep commits attributable and reversible.
 - Update contracts before or with consumers.
