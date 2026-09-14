@@ -13,4 +13,6 @@ obj/
 *.tfstate
 *.tfstate.*
 .local/
+.studio/cache/
+apps/studio-web/src/generated/studio-data.json
 

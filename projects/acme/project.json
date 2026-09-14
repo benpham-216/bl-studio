@@ -1,0 +1,7 @@
+{
+  "$schema": "../../contracts/project.schema.json",
+  "schemaVersion": 1,
+  "name": "acme",
+  "extends": "templates/base",
+  "releaseVersion": "0.1.0"
+}

@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bl.studio/contracts/component.schema.json",
+  "title": "Studio Component Definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "kind", "name", "slots"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "component" },
+    "name": { "type": "string", "minLength": 1 },
+    "slots": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["tokens"],
+        "properties": {
+          "tokens": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 },
+            "uniqueItems": true
+          }
+        }
+      }
+    }
+  }
+}

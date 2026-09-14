@@ -1,0 +1,11 @@
+{
+  "$schema": "../../../contracts/form.schema.json",
+  "schemaVersion": 1,
+  "kind": "form",
+  "name": "LoginForm",
+  "components": [
+    { "component": "Input", "instanceName": "email" },
+    { "component": "Input", "instanceName": "password" },
+    { "component": "Button", "instanceName": "login-submit" }
+  ]
+}

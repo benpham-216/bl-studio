@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bl.studio/contracts/page.schema.json",
+  "title": "Studio Page Definition",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "kind", "name", "forms"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "kind": { "const": "page" },
+    "name": { "type": "string", "minLength": 1 },
+    "forms": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  }
+}

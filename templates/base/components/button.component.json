@@ -1,0 +1,9 @@
+{
+  "$schema": "../../../contracts/component.schema.json",
+  "schemaVersion": 1,
+  "kind": "component",
+  "name": "Button",
+  "slots": {
+    "root": { "tokens": ["color.primary", "color.onPrimary", "radius.md", "spacing.md"] }
+  }
+}
