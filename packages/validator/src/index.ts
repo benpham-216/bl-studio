@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import type { AnySchema } from 'ajv';
 import Ajv2020 from 'ajv/dist/2020.js';
 import { listProjects, resolveProject, type ResolvedToken } from '../../resolver/src/index.js';
 
@@ -47,7 +48,8 @@ async function validateSchemas(repoRoot: string): Promise<string[]> {
   const validators = new Map<string, ReturnType<typeof ajv.compile>>();
 
   for (const name of schemaFiles) {
-    validators.set(name, ajv.compile(await readJson(path.join(contracts, `${name}.schema.json`))));
+    const schema = (await readJson(path.join(contracts, `${name}.schema.json`))) as AnySchema;
+    validators.set(name, ajv.compile(schema));
   }
 
   const targets: Array<{ file: string; schema: string }> = [
