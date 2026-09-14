@@ -1,0 +1,9 @@
+{
+  "name": "@bl-studio/validator",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "ajv": "8.17.1"
+  }
+}

@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "required": ["schemaVersion", "name", "extends", "releaseVersion"],
   "properties": {
+    "$schema": { "type": "string" },
     "schemaVersion": { "const": 1 },
     "name": { "type": "string", "pattern": "^[a-z][a-z0-9-]*$" },
     "extends": { "type": "string", "pattern": "^templates/[a-z][a-z0-9-]*$" },

@@ -6,6 +6,7 @@
   "additionalProperties": false,
   "required": ["schemaVersion", "kind", "name", "slots"],
   "properties": {
+    "$schema": { "type": "string" },
     "schemaVersion": { "const": 1 },
     "kind": { "const": "component" },
     "name": { "type": "string", "minLength": 1 },
@@ -16,11 +17,7 @@
         "additionalProperties": false,
         "required": ["tokens"],
         "properties": {
-          "tokens": {
-            "type": "array",
-            "items": { "type": "string", "minLength": 1 },
-            "uniqueItems": true
-          }
+          "tokens": { "type": "array", "items": { "type": "string", "minLength": 1 }, "uniqueItems": true }
         }
       }
     }
