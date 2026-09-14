@@ -1,0 +1,17 @@
+{
+  "color": {
+    "brand": {
+      "500": { "$value": "#2563eb", "$type": "color" }
+    },
+    "neutral": {
+      "0": { "$value": "#ffffff", "$type": "color" },
+      "950": { "$value": "#0b1120", "$type": "color" }
+    }
+  },
+  "radius": {
+    "md": { "$value": "8px", "$type": "dimension" }
+  },
+  "spacing": {
+    "md": { "$value": "16px", "$type": "dimension" }
+  }
+}

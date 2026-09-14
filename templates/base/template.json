@@ -1,0 +1,7 @@
+{
+  "$schema": "../../contracts/template.schema.json",
+  "schemaVersion": 1,
+  "name": "base",
+  "releaseVersion": "0.1.0",
+  "description": "Canonical Studio design contract. Projects inherit it and may override primitive token values only."
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "../../../contracts/page.schema.json",
+  "schemaVersion": 1,
+  "kind": "page",
+  "name": "LoginPage",
+  "forms": ["LoginForm"]
+}

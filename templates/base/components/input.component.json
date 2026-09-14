@@ -1,0 +1,9 @@
+{
+  "$schema": "../../../contracts/component.schema.json",
+  "schemaVersion": 1,
+  "kind": "component",
+  "name": "Input",
+  "slots": {
+    "root": { "tokens": ["color.surface.default", "color.text.primary", "radius.md", "spacing.md"] }
+  }
+}

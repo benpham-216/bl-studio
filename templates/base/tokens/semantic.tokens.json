@@ -1,0 +1,12 @@
+{
+  "color": {
+    "primary": { "$value": "{color.brand.500}", "$type": "color" },
+    "onPrimary": { "$value": "{color.neutral.0}", "$type": "color" },
+    "surface": {
+      "default": { "$value": "{color.neutral.0}", "$type": "color" }
+    },
+    "text": {
+      "primary": { "$value": "{color.neutral.950}", "$type": "color" }
+    }
+  }
+}

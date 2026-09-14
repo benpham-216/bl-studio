@@ -1,0 +1,9 @@
+{
+  "name": "@bl-studio/resolver",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "style-dictionary": "5.5.3"
+  }
+}

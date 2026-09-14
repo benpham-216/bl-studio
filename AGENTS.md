@@ -2,28 +2,33 @@
 
 ## Scope
 
-This repository implements bl.Studio. Durable general knowledge belongs in `benpham-216/knowledge-base`; source managed by the studio remains in its own repository.
+This repository implements bl.Studio. Durable general knowledge belongs in `benpham-216/knowledge-base`. For Studio design definitions, **Git files are the source of truth**; a future database may store accounts, comments, or telemetry but must never become authoritative for tokens, templates, schemas, or locator contracts.
 
 ## Change workflow
 
 - Never push implementation changes directly to `dev` or `main`.
 - Create a focused branch and pull request for every change.
+- Feature work targets `dev`; promotion from `dev` to `main` is a separate reviewed change.
 - Keep commits attributable and reversible.
 - Update contracts before or with consumers.
 - Include acceptance evidence in the pull request.
 - Do not merge when required checks fail or review threads remain unresolved.
 
-## Architecture rules
+## Git-backed Studio invariants
 
-- Keep the MVP backend modular and independently testable inside one deployment.
-- Modules own their records and expose application services.
-- Bind revision-sensitive operations to immutable commit SHAs.
-- Never execute submitted source in the API or Go coordinator.
-- Treat release versions and artifacts as immutable.
-- Require workspace identity in tenant-owned records and authorization paths.
-- Use idempotency keys for asynchronous commands.
-- Record security-sensitive and lifecycle changes in the audit trail.
+- Projects inherit one template level only during Phase 1: `project -> template`.
+- Project override files may change approved primitive token roots only. Semantic token names are frozen shared contracts.
+- Use Style Dictionary `include` for base tokens and `source` for intentional project overrides.
+- Generated `dist/` and `.studio/cache/` content is rebuildable and never authored as source.
+- Stable test locators derive from logical identity, not project name or render order.
+- Blast-radius indexes are generated from component/form/page definitions; never hand-maintain a second usage map.
+- Local hooks are fast feedback only. CI plus protected branch rules are the authoritative publication gate.
+- A base-template change must validate every dependent project. A project override change validates that project at minimum.
 
-## Delivery focus
+## Phase boundaries
 
-Complete one TypeScript asset lifecycle before adding another language, registry, executable plugin system, MCP adapter, or separate NoSQL database.
+- Phase 0.5: read, resolve, validate, index usage, render read-only viewer.
+- Phase 1: edit primitive tokens, preview impact, save as commit, clone by inheritance, rollback through Git.
+- Phase 2: AI proposal branches plus human approve/reject/comment flow.
+
+Do not add AI generation or a design database before the deterministic Phase 0.5/1 contracts are proven.
