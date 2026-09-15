@@ -4,6 +4,14 @@
 
 This repository implements bl.Studio. Durable general knowledge belongs in `benpham-216/knowledge-base`; source managed by the studio remains in its own repository.
 
+## Knowledge reference
+
+- Read `knowledge-base.yaml` before changing architecture, versioning, template, plugin, or MVP decisions.
+- Treat accepted ADRs and implementation contracts in this repository as the authority for current bl.Studio behavior.
+- Distill reusable findings into `benpham-216/knowledge-base` through a separate pull request.
+- Link knowledge by stable note ID and keep the repository reference on `main` unless a task intentionally requires a fixed commit.
+- Never copy application source or secrets into the knowledge base.
+
 ## Change workflow
 
 - Never push implementation changes directly to `dev` or `main`.
